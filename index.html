@@ -2,44 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BlackArch</title>
+<title>BlackArch // Client Archive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="boot">
-  <canvas id="bootfx"></canvas>
-  <div class="boot-box">
-    <div class="boot-logo">BLACK<span>ARCH</span></div>
-    <div class="boot-log" id="bootlog"></div>
-    <div class="boot-bar"><i id="bootbar"></i></div>
-    <div class="boot-pct" id="bootpct">0%</div>
-  </div>
-</div>
+<div id="boot"><canvas id="bootfx"></canvas><div class="boot-box">
+  <div class="boot-kicker">BLACKARCH // SYSTEM BOOT</div><div class="boot-logo">BLACK<span>ARCH</span></div>
+  <div class="boot-status"><span class="status-dot"></span><span id="bootstatus">initializing archive...</span></div>
+  <div class="boot-log" id="bootlog"></div><div class="boot-bar"><i id="bootbar"></i></div><div class="boot-pct" id="bootpct">0%</div>
+</div></div>
 <div class="bg"></div>
 <div class="app">
-  <aside class="side">
-    <a class="brand" href="#clients">BLACK<span>ARCH</span></a>
-    <nav id="tabs">
-      <button data-tab="clients" class="on"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg><b>Clients</b></button>
-      <button data-tab="cfg"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"/></svg><b>CFG</b></button>
-      <button data-tab="install"><svg viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg><b>Install</b></button>
-      <button data-tab="youtube"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg><b>YouTube</b></button>
-      <button data-tab="discord"><svg viewBox="0 0 24 24"><path d="M7 7c3-1.5 7-1.5 10 0 2 3 3 6 3 9-2 1.500-4 2-4 2l-1-2M7 7C5 10 4 13 4 16c2 1.500 4 2 4 2l1-2M9 13h.01M15 13h.01"/></svg><b>Discord</b></button>
-    </nav>
-    <div class="side-foot">v3 · online<span class="dot"></span></div>
-  </aside>
-  <main>
-    <section class="panel on" id="clients"><header><p>01 / CLIENTS</p><h1>Clients</h1></header><div class="grid" id="clientGrid"></div></section>
-    <section class="panel" id="cfg"><header><p>02 / CONFIGS</p><h1>CFG</h1></header><div class="list" id="cfgList"></div></section>
-    <section class="panel" id="install"><header><p>03 / GUIDE</p><h1>Download</h1></header><ol class="steps" id="steps"></ol></section>
-    <section class="panel" id="youtube"><header><p>04 / VIDEO</p><h1>YouTube</h1></header><div class="grid vids" id="vidGrid"></div></section>
-    <section class="panel" id="discord"><header><p>05 / COMMUNITY</p><h1>Discord</h1></header><div class="hero-card" id="discordCard"></div></section>
-  </main>
-</div>
-<div class="toast" id="toast"></div>
-<script src="script.js"></script>
-</body>
-</html>
-
+<aside class="side">
+  <a class="brand" href="#clients"><span class="brand-mark">B</span><span>BLACK<span>ARCH</span></span></a>
+  <div class="side-label">ARCHIVE</div>
+  <nav id="tabs">
+    <button data-tab="clients" class="on"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg><b>Clients</b><em>01</em></button>
+    <button data-tab="cfg"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"/></svg><b>CFG</b><em>02</em></button>
+    <button data-tab="install"><svg viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg><b>Install</b><em>03</em></button>
+    <button data-tab="youtube"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10 9.5v5l4.5-2.5z"/></svg><b>YouTube</b><em>04</em></button>
+    <button data-tab="discord"><svg viewBox="0 0 24 24"><path d="M7 7c3-1.5 7-1.5 10 0 2 3 3 6 3 9-2 1.5-4 2-4 2l-1-2M7 7C5 10 4 13 4 16c2 1.5 4 2 4 2l1-2M9 13h.01M15 13h.01"/></svg><b>Discord</b><em>05</em></button>
+  </nav>
+  <div class="side-card"><span>ARCHIVE STATUS</span><strong><i></i> ONLINE</strong><small>clients database ready</small></div>
+  <div class="side-foot">BLACKARCH <span>v4.0</span></div>
+</aside>
+<main>
+<section class="panel on" id="clients"><header><div><p>01 / CLIENT ARCHIVE</p><h1>Clients</h1></div><div class="header-stat"><strong id="clientCount">33</strong><span>ENTRIES</span></div></header>
+<div class="toolbar"><div class="filters" id="filters"><button class="active" data-filter="all">ALL</button><button data-filter="1.8.8">1.8.8</button><button data-filter="1.12.2+">1.12.2+</button><button data-filter="other">OTHER</button></div><label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg><input id="search" placeholder="Search clients..." autocomplete="off"></label></div>
+<div class="grid" id="clientGrid"></div><div class="empty" id="empty">No clients match your search.</div></section>
+<section class="panel" id="cfg"><header><div><p>02 / CONFIGURATION</p><h1>CFG</h1></div></header><div class="feature-note"><span class="note-icon">CFG</span><div><h2>Configuration archive</h2><p>Use the client-specific configuration files supplied with each release. Place them in the location described by the installation guide.</p></div></div><div class="list" id="cfgList"></div></section>
+<section class="panel" id="install"><header><div><p>03 / SETUP GUIDE</p><h1>Download</h1></div></header><ol class="steps" id="steps"></ol></section>
+<section class="panel" id="youtube"><header><div><p>04 / MEDIA</p><h1>YouTube</h1></div></header><div class="media-empty"><div class="media-icon">â–¶</div><h2>Video section</h2><p>Add your YouTube videos to <code>script.js</code> and they will appear here.</p></div></section>
+<section class="panel" id="discord"><header><div><p>05 / COMMUNITY</p><h1>Discord</h1></div></header><div class="hero-card" id="discordCard"></div></section>
+</main></div><div class="toast" id="toast"></div><script src="script.js"></script></body></html>
