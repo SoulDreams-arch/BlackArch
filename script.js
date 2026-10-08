@@ -40,7 +40,7 @@ $('#discordCard').innerHTML = `<h2>${SITE.discord.name}</h2><p>Обновлен�
 
 /* ====== вкладки ====== */
 function show(id) {
-  if (!$('#' + id)) id = 'clients';
+  if (!id || !/^[a-z]+$/.test(id) || !$('#' + id)) id = 'clients';
   $$('.panel').forEach(p => p.classList.toggle('on', p.id === id));
   $$('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === id));
   history.replaceState(null, '', '#' + id); scrollTo(0, 0);

@@ -64,3 +64,7 @@ h1{font:700 clamp(40px,6vw,76px)/1 var(--f);letter-spacing:-2px;margin-bottom:42
  main{padding:36px 6vw 110px}.row{flex-wrap:wrap}.hero-card{padding:32px}
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important}}
+
+/* страховка: если скрипт не загрузился, заставка сама исчезнет */
+#boot{animation:bootfail .5s 6s forwards}
+@keyframes bootfail{to{opacity:0;visibility:hidden}}
