@@ -4,7 +4,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--f);min-height:100v
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(60vw 50vh at 85% 0,#8b5cf622,transparent),radial-gradient(50vw 50vh at 0 100%,#22d3ee18,transparent),linear-gradient(#ffffff06 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,#ffffff06 1px,transparent 1px) 0 0/48px 48px;animation:drift 30s linear infinite}
 @keyframes drift{to{background-position:0 0,0 0,48px 48px,48px 48px}}
-/* загрузка */
+/* CSS */
 #boot{position:fixed;inset:0;z-index:99;background:#05040a;display:grid;place-items:center;transition:clip-path 1s cubic-bezier(.77,0,.18,1),opacity .4s .8s;clip-path:inset(0)}
 #boot.done{clip-path:inset(0 0 100% 0);opacity:0;pointer-events:none}
 #bootfx{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
@@ -14,7 +14,7 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;backgroun
 .boot-log{font:12px/1.9 var(--m);color:var(--mut);height:110px;margin:22px 0 14px;overflow:hidden}.boot-log b{color:var(--b);font-weight:400}
 .boot-bar{height:3px;background:#1a1628;overflow:hidden;border-radius:3px}.boot-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--b));box-shadow:0 0 14px var(--a)}
 .boot-pct{font:11px var(--m);color:var(--mut);text-align:right;margin-top:8px}
-/* каркас */
+/* CSS */
 .app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
 .side{position:sticky;top:0;height:100vh;padding:28px 18px;display:flex;flex-direction:column;border-right:1px solid var(--line);background:#0a0812cc;backdrop-filter:blur(14px)}
 .brand{font:700 22px var(--f);letter-spacing:4px;margin:0 8px 40px}.brand span{color:var(--a)}
@@ -65,6 +65,7 @@ h1{font:700 clamp(40px,6vw,76px)/1 var(--f);letter-spacing:-2px;margin-bottom:42
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important}}
 
-/* страховка: если скрипт не загрузился, заставка сама исчезнет */
+/* CSS */
 #boot{animation:bootfail .5s 6s forwards}
 @keyframes bootfail{to{opacity:0;visibility:hidden}}
+
